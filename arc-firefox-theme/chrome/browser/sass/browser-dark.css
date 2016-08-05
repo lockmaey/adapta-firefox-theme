@@ -47,7 +47,7 @@
 #navigator-toolbox > toolbar:not(:-moz-lwtheme):not(#toolbar-menubar):not(#TabsToolbar) {
   -moz-appearance: none;
   border-style: none;
-  background-color: #2A373E; }
+  background-color: #455A64; }
 
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
   padding-top: 1px;
@@ -77,7 +77,7 @@
 
 #nav-bar {
   background-image: none !important;
-  background-color: #2A373E !important;
+  background-color: #455A64 !important;
   box-shadow: none;
   padding-top: 3px;
   padding-bottom: 3px; }
@@ -1143,14 +1143,14 @@ menuitem:not([type]):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
   padding: 2px 3px;
   margin: 0 3px;
   color: #D3DAE3;
-  background-color: #2A373E;
+  background-color: #455A64;
   border-style: none;
   border-bottom: 1px solid #55646B; }
 
 #urlbar[focused],
 .searchbar-textbox[focused] {
   color: #D3DAE3;
-  background-color: #2A373E;
+  background-color: #455A64;
   border-style: none;
   border-bottom: 2px solid #00BCD4;
   padding: 2px 3px 1px 3px;
@@ -2112,7 +2112,7 @@ html|span.ac-emphasize-text-url {
 
 /* Findbar */
 .browserContainer > findbar {
-  background-color: #2A373E;
+  background-color: #455A64;
   color: #D3DAE3;
   border-top: 1px solid;
   -moz-border-top-colors: #2b2e39;
