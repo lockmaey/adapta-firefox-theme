@@ -16,10 +16,6 @@ textbox {
   cursor: text;
   margin: 2px 4px;
   border: 2px solid;
-  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
-  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
-  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
-  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
   padding: 2px 2px 3px;
   -moz-padding-start: 4px;
   background-color: -moz-Field;
