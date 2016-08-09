@@ -20,37 +20,6 @@ NULL =
 
 
 mkxpi:
-if ENABLE_LIGHT
-	cp -R $(top_srcdir)/arc-firefox-theme $(lighttempdir)
-
-	cp $(lighttempdir)/chrome/browser/sass/browser-light.css $(lighttempdir)/chrome/browser/browser.css
-	rm -rf $(lighttempdir)/chrome/browser/sass
-	rm $(lighttempdir)/chrome/overrides.sh
-
-	cd $(lighttempdir) && \
-		/usr/bin/zip -FS -r ../arc-firefox-theme-$(VERSION).xpi *
-
-	rm -rf $(lighttempdir)
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	cp -R $(top_srcdir)/arc-firefox-theme $(darkertempdir)
-
-	cp $(darkertempdir)/chrome/browser/sass/browser-darker.css $(darkertempdir)/chrome/browser/browser.css
-	rm -rf $(darkertempdir)/chrome/browser/sass
-	rm $(darkertempdir)/chrome/overrides.sh
-
-	sed -i 's/arc-theme/arc-darker-theme/' $(darkertempdir)/chrome.manifest
-	sed -i 's/arc-theme/arc-darker-theme/' $(darkertempdir)/install.rdf
-	sed -i 's/Arc /Arc Darker /' $(darkertempdir)/install.rdf
-
-	sed -i "s/$(light_guid)/$(darker_guid)/" $(darkertempdir)/install.rdf
-
-	cd $(darkertempdir) && \
-		/usr/bin/zip -FS -r ../arc-darker-firefox-theme-$(VERSION).xpi *
-
-	rm -rf $(darkertempdir)
-endif # ENABLE_LIGHT
 
 if ENABLE_DARK
 	cp -R $(top_srcdir)/arc-firefox-theme $(darktempdir)
@@ -59,14 +28,8 @@ if ENABLE_DARK
 	rm -rf $(darktempdir)/chrome/browser/sass
 	rm $(darktempdir)/chrome/overrides.sh
 
-	sed -i 's/arc-theme/arc-dark-theme/' $(darktempdir)/chrome.manifest
-	sed -i 's/arc-theme/arc-dark-theme/' $(darktempdir)/install.rdf
-	sed -i 's/Arc /Arc Dark /' $(darktempdir)/install.rdf
-
-	sed -i "s/$(light_guid)/$(dark_guid)/" $(darktempdir)/install.rdf
-
 	cd $(darktempdir) && \
-		/usr/bin/zip -FS -r ../arc-dark-firefox-theme-$(VERSION).xpi *
+		/usr/bin/zip -FS -r ../adapta-firefox-theme-$(VERSION).xpi *
 
 	rm -rf $(darktempdir)
 endif # ENABLE_DARK
